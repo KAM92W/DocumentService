@@ -8,8 +8,10 @@ namespace DocumentService_1.Models
 {
     public class Title
     {
-        private string title { get; set; }
-        private string description { get; set; }
+        string title { get; set; }
+        string description { get; set; }
+
+        public Title() { }
 
         public void Show()
         {
