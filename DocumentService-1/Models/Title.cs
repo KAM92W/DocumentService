@@ -21,6 +21,9 @@ namespace DocumentService_1.Models
             this.description = description; 
         }
 
+        public string ChangeTitle(string chtitle) => title = chtitle;
+        public string ChangeDescription(string chdescription) => description = chdescription;
+
         public void Show()
         {
             Console.WriteLine(title + " - " + description);
