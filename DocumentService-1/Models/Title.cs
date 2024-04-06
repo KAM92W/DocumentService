@@ -8,15 +8,22 @@ namespace DocumentService_1.Models
 {
     public class Title
     {
-        string title { get; set; }
-        string description { get; set; }
+        private string title { get; set; }
+        private string description { get; set; }
 
-        public Title() { }
+        public Title(string title)
+        {
+            this.title = title;
+        }
+        public Title(string title, string description) 
+        { 
+            this.title = title; 
+            this.description = description; 
+        }
 
         public void Show()
         {
-            Console.WriteLine(title);
-            Console.WriteLine(description);
+            Console.WriteLine(title + " - " + description);
         }
     }
 }
