@@ -16,7 +16,7 @@
         }
 
         public string ChangeTitle (string title) => this.title = title;
-        public string ChangeDescription(string chdescription) => description = chdescription;
+        public string ChangeDescription(string description) => this.description = description;
 
         public void Show()
         {
