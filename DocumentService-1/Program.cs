@@ -1,9 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DocumentService_1.Models;
-using System.Runtime.CompilerServices;
 
 
-Title title = new Title("Это заголовок #1");
+Title title1 = new Title("Это заголовок #1");
 Title title_description = new Title("Это заголовок #2", "Это описание #1");
 title_description.Show();
 Console.WriteLine();
@@ -13,7 +12,7 @@ Console.WriteLine();
 
 Console.WriteLine("Давайте их изменим!");
 Console.WriteLine();
-
+//--------------------------------------------------------------------
 Console.Write("Введите свой заголовок: ");
 string chtitle = Console.ReadLine();
 Console.WriteLine();

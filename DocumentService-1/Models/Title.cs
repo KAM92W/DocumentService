@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DocumentService_1.Models
+﻿namespace DocumentService_1.Models
 {
     public class Title
     {
@@ -21,7 +15,7 @@ namespace DocumentService_1.Models
             this.description = description; 
         }
 
-        public string ChangeTitle(string chtitle) => title = chtitle;
+        public string ChangeTitle (string title) => this.title = title;
         public string ChangeDescription(string chdescription) => description = chdescription;
 
         public void Show()
