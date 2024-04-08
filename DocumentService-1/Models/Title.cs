@@ -1,20 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DocumentService_1.Models
+﻿namespace DocumentService_1.Models
 {
     public class Title
     {
-        private string title { get; set; }
-        private string description { get; set; }
-
+        private string title;
+        private string description;
+        private string FTitle 
+        {
+            get { return title; } 
+            set { title = value; } 
+        }
+        private string Fdescription 
+        {
+            get { return description; }
+            set { description = value; }
+        }
+        //--------------------------------------------------------------------
+        public Title(string title)
+        {
+            this.title = title;
+        }
+        public Title(string title, string description) 
+        { 
+            this.title = title; 
+            this.description = description; 
+        }
+        //--------------------------------------------------------------------
+        public void ChangeTitle(string title)
+        { this.title = title; }
+        public void ChangeDescription(string description)
+        { this.description = description; }
+        //--------------------------------------------------------------------
         public void Show()
         {
-            Console.WriteLine(title);
-            Console.WriteLine(description);
+            Console.WriteLine(title + " - " + description);
         }
     }
 }
