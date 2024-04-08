@@ -2,21 +2,33 @@
 {
     public class Title
     {
-        private string title { get; set; }
-        private string description { get; set; }
+        private string title;
+        private string description;
+        private string Ftitle 
+        {
+            get { return title; } 
+            set { title = value; } 
+        }
+        private string Fdescription 
+        {
+            get { return description; }
+            set { description = value; }
+        }
         //--------------------------------------------------------------------
         public Title(string title)
         {
-            this.title = title;
+            Ftitle = title;
         }
         public Title(string title, string description) 
         { 
-            this.title = title; 
-            this.description = description; 
+            Ftitle = title; 
+            Fdescription = description; 
         }
         //--------------------------------------------------------------------
-        public string ChangeTitle (string title) => this.title = title;
-        public string ChangeDescription(string description) => this.description = description;
+        public void ChangeTitle(string title)
+        { Ftitle = title; }
+        public void ChangeDescription(string description)
+        { Fdescription = description; }
         //--------------------------------------------------------------------
         public void Show()
         {
