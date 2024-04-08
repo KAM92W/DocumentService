@@ -4,7 +4,7 @@
     {
         private string title;
         private string description;
-        private string Ftitle 
+        private string FTitle 
         {
             get { return title; } 
             set { title = value; } 
@@ -17,18 +17,18 @@
         //--------------------------------------------------------------------
         public Title(string title)
         {
-            Ftitle = title;
+            this.title = title;
         }
         public Title(string title, string description) 
         { 
-            Ftitle = title; 
-            Fdescription = description; 
+            this.title = title; 
+            this.description = description; 
         }
         //--------------------------------------------------------------------
         public void ChangeTitle(string title)
-        { Ftitle = title; }
+        { this.title = title; }
         public void ChangeDescription(string description)
-        { Fdescription = description; }
+        { this.description = description; }
         //--------------------------------------------------------------------
         public void Show()
         {
