@@ -23,3 +23,15 @@ Console.WriteLine();
 title_description.ChangeTitle(chtitle);
 title_description.ChangeDescription(chdescription);
 title_description.Show();
+Console.WriteLine();
+//--------------------------------------------------------------------
+Body content_0 = new Body();
+Console.Write("Введите контент по-умолчанию: ");
+content_0.Content = Console.ReadLine();
+content_0.Show();
+Console.WriteLine();
+
+Console.Write("А теперь введите свой контент: ");
+Body content_1 = new Body(Console.ReadLine());
+Console.WriteLine();
+content_1.Show();
