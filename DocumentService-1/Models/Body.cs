@@ -4,8 +4,8 @@
     {
         private string _content;
         public string Content
-        { 
-            get { return _content; } 
+        {
+            get { return $"<body>{_content}</body>"; } 
             set 
             {
                 string errchars = "/<>";
@@ -24,13 +24,18 @@
                             changedvalue.Add("%3F");
                 }
                 string stringvalue = string.Join("", changedvalue.ToArray());
-                _content = $"<body>{stringvalue}</body>"; 
+                _content = stringvalue; 
             } 
         }
         public Body() { }
         public Body(string content) 
         {
             Content = content;
+        }
+
+        public void addString (string addstring) 
+        {
+            _content += $" {addstring}";
         }
 
         public void Show() 
