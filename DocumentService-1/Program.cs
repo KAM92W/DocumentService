@@ -35,5 +35,5 @@ Console.Write("А теперь введите свой контент: ");
 Body content_1 = new Body(Console.ReadLine());
 Console.WriteLine();
 Console.Write("Допишите что-нибудь к контенту: ");
-content_1.addString(Console.ReadLine());
+content_1.AddStringToContent(Console.ReadLine());
 content_1.Show();

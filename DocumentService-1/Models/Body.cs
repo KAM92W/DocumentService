@@ -8,39 +8,45 @@
             get { return $"<body>{_content}</body>"; } 
             set 
             {
-                string errchars = "/<>";
-                List <string> changedvalue = [];
-                foreach (char a in value)
-                {
-                    bool b = errchars.Contains(a);
-                    if (b == false)
-                        changedvalue.Add(a.ToString());
-                    else
-                        if (a == '<')
-                            changedvalue.Add("%3C");
-                        if (a == '>')
-                            changedvalue.Add("%3E");
-                        if (a == '/')
-                            changedvalue.Add("%3F");
-                }
-                string stringvalue = string.Join("", changedvalue.ToArray());
-                _content = stringvalue; 
-            } 
+                _content = CorrErrChars(value);
+            }
         }
+        //-----------------------------------------------------------------
         public Body() { }
         public Body(string content) 
         {
             Content = content;
         }
-
-        public void addString (string addstring) 
+        //-----------------------------------------------------------------
+        private string CorrErrChars(string chars)
+        {
+            string errchars = "/<>";
+            List<string> changedvalue = [];
+            foreach (char a in chars)
+            {
+                bool b = errchars.Contains(a);
+                if (b == false)
+                    changedvalue.Add(a.ToString());
+                else
+                    if (a == '<')
+                        changedvalue.Add("%3C");
+                    if (a == '>')
+                        changedvalue.Add("%3E");
+                    if (a == '/')
+                        changedvalue.Add("%3F");
+            }
+            string stringvalue = string.Join("", changedvalue.ToArray());
+            return stringvalue;
+        }
+        //-----------------------------------------------------------------
+        public void AddStringToContent(string addstring)
         {
             _content += $" {addstring}";
         }
-
-        public void Show() 
+        //-----------------------------------------------------------------
+        public void Show()
         {
-            Console.WriteLine(_content);
+            Console.WriteLine(Content);
         }
     }
 }
