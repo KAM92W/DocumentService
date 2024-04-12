@@ -6,10 +6,7 @@
         public string Content
         {
             get { return $"<body>{_content}</body>"; } 
-            set 
-            {
-                _content = CorrErrChars(value);
-            }
+            set { _content = CorrErrChars(value); }
         }
         //-----------------------------------------------------------------
         public Body() { }
@@ -25,15 +22,19 @@
             foreach (char a in chars)
             {
                 bool b = errchars.Contains(a);
-                if (b == false)
-                    changedvalue.Add(a.ToString());
-                else
+                if (b)
+                {
                     if (a == '<')
                         changedvalue.Add("%3C");
                     if (a == '>')
                         changedvalue.Add("%3E");
                     if (a == '/')
                         changedvalue.Add("%3F");
+                }
+                else 
+                {
+                    changedvalue.Add(a.ToString());
+                }
             }
             string stringvalue = string.Join("", changedvalue.ToArray());
             return stringvalue;
@@ -42,6 +43,7 @@
         public void AddStringToContent(string addstring)
         {
             _content += $" {addstring}";
+            _content = CorrErrChars(_content);
         }
         //-----------------------------------------------------------------
         public void Show()
