@@ -32,7 +32,7 @@
         //--------------------------------------------------------------------
         public void Show()
         {
-            Console.WriteLine(title + " - " + description);
+            Console.WriteLine($"{title} {description}");
         }
     }
 }
