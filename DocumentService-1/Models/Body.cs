@@ -42,8 +42,7 @@
         //-----------------------------------------------------------------
         public void AddStringToContent(string addstring)
         {
-            _content += $" {addstring}";
-            _content = CorrErrChars(_content);
+            _content += $" { CorrErrChars(addstring)}";
         }
         //-----------------------------------------------------------------
         public void Show()
