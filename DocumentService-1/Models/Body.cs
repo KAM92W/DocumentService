@@ -49,5 +49,9 @@
         {
             Console.WriteLine(Content);
         }
+        public string DataForDocument()
+        {
+            return _content;
+        }
     }
 }
