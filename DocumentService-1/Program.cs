@@ -39,5 +39,5 @@ using DocumentService_1.Models;
 //content_1.Show();
 
 Document document = new Document (Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
-document.Show();
+document.GenerateDocument();
 //Console.WriteLine (document);

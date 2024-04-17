@@ -51,7 +51,7 @@
         }
         public string DataForDocument()
         {
-            return _content;
+            return this.Content;
         }
     }
 }

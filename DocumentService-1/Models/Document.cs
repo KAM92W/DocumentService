@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace DocumentService_1.Models
+﻿namespace DocumentService_1.Models
 {
     public class Document
     {
@@ -16,10 +14,16 @@ namespace DocumentService_1.Models
             _description = Title1.DescriptionForDocument();
             _content = Body1.DataForDocument();
         }
-        public void Show()
+
+        public void GenerateDocument()
         {
-            Console.WriteLine($"{_title} ({_description})");
-            Console.WriteLine(_content);
+            Console.WriteLine("<html>");
+            Console.WriteLine(" <head>");
+            Console.WriteLine($"  <title> {_title} </title>");
+            Console.WriteLine($"  <meata name=description conent = {_description}");
+            Console.WriteLine(" </head>");
+            Console.WriteLine($" {_content}");
+            Console.WriteLine("</html>");
         }
     }
 }
