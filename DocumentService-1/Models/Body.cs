@@ -10,7 +10,7 @@
         }
         //-----------------------------------------------------------------
         public Body() { }
-        public Body(string content) 
+        public Body(string content)
         {
             Content = content;
         }
@@ -47,11 +47,7 @@
         //-----------------------------------------------------------------
         public void Show()
         {
-            Console.WriteLine(Content);
-        }
-        public string DataForDocument()
-        {
-            return this.Content;
+            Console.WriteLine($" {Content}");
         }
     }
 }

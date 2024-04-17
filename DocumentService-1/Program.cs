@@ -38,6 +38,12 @@ using DocumentService_1.Models;
 //content_1.AddStringToContent(Console.ReadLine());
 //content_1.Show();
 
-Document document = new Document (Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+Console.Write("Input the Title: ");
+string T = Console.ReadLine();
+Console.Write("Input the Description: ");
+string D = Console.ReadLine();
+Console.Write("Input the Content: ");
+string C = Console.ReadLine();
+Document document = new Document (T, D, C);
+Console.WriteLine();
 document.GenerateDocument();
-//Console.WriteLine (document);

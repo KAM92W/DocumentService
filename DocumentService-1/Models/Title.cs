@@ -1,7 +1,4 @@
-﻿
-using System.Reflection.Metadata.Ecma335;
-
-namespace DocumentService_1.Models
+﻿namespace DocumentService_1.Models
 {
     public class Title
     {
@@ -10,12 +7,12 @@ namespace DocumentService_1.Models
 
         private string FTitle 
         {
-            get { return _title; } 
+            get { return $"<title>{_title}</title>"; } 
             set { _title = value; } 
         }
-        private string Fdescription 
+        private string FDescription 
         {
-            get { return _description; }
+            get { return $"""<meta name="description" content="{_description}"/>"""; }
             set { _description = value; }
         }
         //--------------------------------------------------------------------
@@ -36,10 +33,11 @@ namespace DocumentService_1.Models
         //--------------------------------------------------------------------
         public void Show()
         {
-            string _title_description = $"{_title} ({_description})";
-            Console.WriteLine(_title_description);
+            //string _title_description = $"{_title} ({_description})";
+            Console.WriteLine(" <head>");
+            Console.WriteLine($"  {FTitle}");
+            Console.WriteLine($"  {FDescription}");
+            Console.WriteLine(" </head>");
         }
-        public string TitleForDocument() { return _title; }
-        public string DescriptionForDocument() { return _description;}
     }
 }
