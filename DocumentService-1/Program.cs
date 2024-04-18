@@ -38,12 +38,31 @@ using DocumentService_1.Models;
 //content_1.AddStringToContent(Console.ReadLine());
 //content_1.Show();
 
-Console.Write("Input the Title: ");
+Console.Write("Input the Title: "); 
 string T = Console.ReadLine();
-Console.Write("Input the Description: ");
+Console.Write("Input the Description: "); 
 string D = Console.ReadLine();
-Console.Write("Input the Content: ");
+Console.Write("Input the Content: "); 
 string C = Console.ReadLine();
 Document document = new Document (T, D, C);
 Console.WriteLine();
 document.GenerateDocument();
+
+Console.WriteLine();
+
+Console.Write("Input the new Title: ");
+string NT = Console.ReadLine();
+document.ForChangeTitle(NT); 
+
+Console.Write("Input the new Description: ");
+string ND = Console.ReadLine();
+document.ForChangeTitle(ND);
+
+Console.WriteLine();
+document.GenerateDocument();
+
+//Console.Write("Input the new Content: ");
+//string NC = Console.ReadLine();
+//document.ForChangeTitle(NC);
+
+//Console.WriteLine();
