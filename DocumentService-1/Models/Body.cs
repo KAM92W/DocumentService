@@ -1,4 +1,6 @@
-﻿namespace DocumentService_1.Models
+﻿using System.Net.Http.Headers;
+
+namespace DocumentService_1.Models
 {
     public class Body
     {
@@ -31,7 +33,7 @@
                     if (a == '/')
                         changedvalue.Add("%3F");
                 }
-                else 
+                else
                 {
                     changedvalue.Add(a.ToString());
                 }

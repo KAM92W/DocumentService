@@ -9,7 +9,6 @@
             _title = new Title(title, description);
             _content = new Body(content);
         }
-
         public void GenerateDocument()
         {
             Console.WriteLine("<html>");
@@ -17,22 +16,17 @@
             _content.Show();
             Console.WriteLine("</html>");
         }
-
-        public void ForChangeTitle(string NT)
+        public void ForChangeTitle(string newTitle)
         {
-            string newT = NT;
-            _title.ChangeTitle(newT);
+            _title.ChangeTitle(newTitle);
         }
-
-        public void ForChangeDescription(string ND)
+        public void ForChangeDescription(string NewDescription)
         {
-            string newND = ND;
-            _title.ChangeDescription(newND);
+            _title.ChangeDescription(NewDescription);
         }
-
-        //public void ForChangeContent(string NC)
-        //{
-        //    _content = new Body(NC);
-        //}
+        public void ForChangeContent(string newContent)
+        {
+            _content = new Body(newContent);
+        }
     }
 }

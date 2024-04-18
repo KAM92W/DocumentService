@@ -4,7 +4,6 @@
     {
         private string _title;
         private string _description;
-
         private string FTitle 
         {
             get { return $"<title>{_title}</title>"; } 
