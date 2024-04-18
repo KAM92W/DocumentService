@@ -2,37 +2,41 @@
 {
     public class Title
     {
-        private string title;
-        private string description;
+        private string _title;
+        private string _description;
         private string FTitle 
         {
-            get { return title; } 
-            set { title = value; } 
+            get { return $"<title>{_title}</title>"; } 
+            set { _title = value; } 
         }
-        private string Fdescription 
+        private string FDescription 
         {
-            get { return description; }
-            set { description = value; }
+            get { return $"""<meta name="description" content="{_description}"/>"""; }
+            set { _description = value; }
         }
         //--------------------------------------------------------------------
         public Title(string title)
         {
-            this.title = title;
+            this._title = title;
         }
         public Title(string title, string description) 
         { 
-            this.title = title; 
-            this.description = description; 
+            this._title = title; 
+            this._description = description; 
         }
         //--------------------------------------------------------------------
         public void ChangeTitle(string title)
-        { this.title = title; }
+        { this._title = title; }
         public void ChangeDescription(string description)
-        { this.description = description; }
+        { this._description = description; }
         //--------------------------------------------------------------------
         public void Show()
         {
-            Console.WriteLine(title + " - " + description);
+            //string _title_description = $"{_title} ({_description})";
+            Console.WriteLine(" <head>");
+            Console.WriteLine($"  {FTitle}");
+            Console.WriteLine($"  {FDescription}");
+            Console.WriteLine(" </head>");
         }
     }
 }
